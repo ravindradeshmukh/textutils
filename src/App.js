@@ -2,14 +2,14 @@ import logo from './logo.svg';
 import './App.css';
 import Navbar from './Components/Navbar';
 import TextForm from './Components/TextForm';
-import About from './Components/About';
+// import About from './Components/About';
 import React, { useState } from 'react'
 import Alert from './Components/Alert';
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from "react-router-dom";
+// import {
+//   BrowserRouter,
+//   Routes,
+//   Route,
+// } from "react-router-dom";
 
 
 function App() {
@@ -48,10 +48,12 @@ function App() {
       <Navbar title="Text Util" mode={mode} darkMode={darkMode} showMode={showMode}/>
       <Alert alert={alert}/>
       <div className='container my-3' style={mode}>
-        <Routes>
+        {/* <Routes>
             <Route index element={<TextForm mode={mode}  />} />
             <Route path="/about" element={<About mode={mode}/>} />
-        </Routes>
+        </Routes> */}
+        <TextForm mode={mode}  />
+        {/* <About mode={mode}/> */}
       </div>
     </>
   );
